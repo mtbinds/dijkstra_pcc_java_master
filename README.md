@@ -53,9 +53,59 @@
    
    -->On peut aussi récupérer le graphe généré aléatoirement par RandomGenerator() de GraphStream et le stocker sous forme d'un fichier (.dgs)
    
-   -->Le graphe généré aléatoirement et stocké dans un fichier (.dgs) est filtré pour en extraire les Noeuds et les arcs aussi les poids des
+   -->Le graphe généré aléatoirement et stocké dans un fichier (.dgs) est filtré pour en extraire les Noeuds et les arcs aussi les poids des arêtes
    
-   arêtes afin de comparer les deux versions de l'algorithme de DIJKSTRA sur le même graphe pour avoir les meilleurs résultats possibles.
+   afin de comparer les deux versions de l'algorithme de DIJKSTRA sur le même graphe pour avoir les meilleurs résultats possibles.
+   
+   -->Ce générateur affecte un seul poids pour toutes les arêtes, et pour les ars entre deux noeuds il les affecte aléatoirement selon le degré 
+   
+   moyen de chaque noeud (le nombre de ses arêtes dont il fait partie de l'une de ses extrémités).
+   
+ 
+**3/Le fonctionnement de l'algorithme implémenté**   
+   
+  -->L'algoritme de DIJKSTRA qu'on a implémenté fait partie de la classe Graphe.
+  
+  -->La classe (Graphe) comporte deux sous classes qui sont (Noeud et Arc) car un graphe donné est constitué de Noeuds et d'arcs, en plus des 
+  
+  différentes méthodes et fonctions incluses dans la classe (Graphe). 
+  
+  
+ > Le fonctionnement des méthodes et fonctions de la classe (Graphe):
+ 
+  ** 1/La classe (Arc):** Cette classe est définie par trois paramètre (les deux noeuds des extrémités et la distances entre eux), et elle permet de 
+   
+   joindre deux noeuds.
+   
+  ** 1/La classe (Noeud ):** cette classe nous permet de définir un noeud alors un noeud est défini par (son nom qui est une chaîne de caractères,
+  
+  sa distance d'un autre Noeud de (Graphe), ses voisins qui sont sous forme d'un HashMap et son noeud précédent).
+  
+    -->La méthode printPath() de la classe (Noeud) nous permet d'afficher le chemin depuis le Noeud précédent d'un noeud donné.
+    
+    -->La méthode compareTo() de la classe (Noeud) nous permet de comparer la distance entre deux Noeuds différents de (Graphe). Elle retourne la 
+    
+    distance sous forme d'un entier.
+    
+    -->La méthode equals() de la classe (Noeud) qui est en vrai une méthode de l'interface (comparable) implémentée par la classe (Noeud), cette 
+    
+    méthode nous permet de comparer entre deux Noeuds s'ils sont équivalents (nom, les voisins et la distance entre un noeud et son noeud 
+    
+    précédent), elle retourne true si c'est le cas.
+    
+    -->La méthode hashCode()
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
    
    
