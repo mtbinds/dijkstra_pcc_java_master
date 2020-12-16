@@ -32,7 +32,7 @@
         algorithme qu'on a implémenté dans la classe (Graphe). 
         
         
-        > 1/La classes (RandomGraph):
+        > 1/La classe (RandomGraph):
         
         ->Cette classe nous permet de générer un graphe aléatoirement en utilisant les (méthodes/fonctions) de GraphStream, le graphe généré on 
         
@@ -41,7 +41,7 @@
         graphe généré.
         
         
-**2/Le générateur des graphes (RandomGenerator()) de GraphStream**  
+**3/Le générateur des graphes (RandomGenerator()) de GraphStream**  
 
    -->Ce générateur nous permet de générer des graphes de différentes tailles aléatoirement ce qui nous facilite la comparaison des deux versions 
    
@@ -62,7 +62,7 @@
    moyen de chaque noeud (le nombre de ses arêtes dont il fait partie de l'une de ses extrémités).
    
  
-**3/Le fonctionnement de l'algorithme implémenté**   
+**4/Le fonctionnement de l'algorithme implémenté**   
    
   -->L'algoritme de DIJKSTRA qu'on a implémenté fait partie de la classe Graphe.
   
@@ -134,7 +134,31 @@
   -->*La méthode ecrireChemin()*:cette méthode nous permet d'afficher le chemin depuis le (Noeud) source vers le (Noeud) destinataire. 
   
   
-  -->*La méthode printAllPaths()*:cette méthode nous permet d'afficher tout les chemin depuis le (Noeud) source vers tout les (Noeuds) de (Graphe)
+  -->*La méthode printAllPaths()*:cette méthode nous permet d'afficher tout les chemin depuis le (Noeud) source vers tout les (Noeuds) de (Graphe).
+  
+  
+  
+** 5/La version de l'algorithme de DIJKSTRA de GraphStream:**
+  
+  
+    ->Cette version comprend un nombre important de méthodes et fonctions,les principales sont:
+     
+     -->*La méthode init()*: elle permet de définir un graphe spécifique comme étant un graphe à qui on applique le programme de (DIJKSTRA).
+   
+     -->*La méthode setSource()*: elle permet de définir le (Noeud) source de graphe pour le programme de (DIJKSTRA).
+     
+     -->*La méthode compute()*: c'est la méthode la plus importante car elle permet d'avoir tout les courts chemins de (Noeud) source vers tout
+     
+        autres Noeuds de (Graphe).
+        
+     -->*La méthode getPath()*: cette méthode nous retourne le plus court chemin entre le (Noeud) source et un (Noeud) destinataire.
+     
+     
+     
+   --> `On Constate que la version de l'algorithme (DIJKSTRA) de GraphStream est plus pratique en terme d'appels vers les méthodes/fonctions`
+   
+   
+   
    
   
   
