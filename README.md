@@ -1,4 +1,3 @@
-
                         **Rapport de TP ** *(Implémentation d'une version naïve de l'algorithme de DIJKSTRA)* 
  
  **1/Introduction ** 
@@ -22,10 +21,10 @@
  **2/Structure de programme**
  
   -->Pour l'implémentation de l'algorithme on a utilisé trois classes réparties dans deux fichiers (.java) : 
+  
      
-       > 1/Les classes (Dijkstra et Graphe): 
+       > 1/Les deux classes (Dijkstra et Graphe): 
        
-        
         ->Ces deux classes nous permettent d'imlémenter et de tester la version naive de l'algorithme de Dijkstra, la classe (Graphe) nous permet 
          
         de créer le graphe et lui appliquer l'algorithme de dijkstra qu'on a implémenté, alors que la classe (Dijkstra) nous permet de tester notre
@@ -33,7 +32,20 @@
         algorithme qu'on a implémenté dans la classe (Graphe). 
         
         
-        > 1/Les classes (Dijkstra et Graphe): 
+        > 1/La classes (RandomGraph):
+        
+        ->Cette classe nous permet de générer un graphe aléatoirement en utilisant les (méthodes/fonctions) de GraphStream, le graphe généré on 
+        
+        lui applique les méthodes de la classe (Dijkstra) de Graph Stream pour avoir le plus petit chemin de la source vers un noeud spécifique de
+        
+        graphe généré.
+        
+        
+**2/Le générateur des graphes (RandomGenerator()) de GraphStream**        
+        
+        
+        
+        
 
 
 
