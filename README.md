@@ -73,27 +73,59 @@
   
  > Le fonctionnement des méthodes et fonctions de la classe (Graphe):
  
-  ** 1/La classe (Arc):** Cette classe est définie par trois paramètre (les deux noeuds des extrémités et la distances entre eux), et elle permet de 
+  ** 1/La classe (Arc):** Cette classe est définie par trois paramètre (les deux noeuds des extrémités et la distances entre eux), et elle permet 
+  de joindre deux noeuds.
    
-   joindre deux noeuds.
-   
-  ** 1/La classe (Noeud ):** cette classe nous permet de définir un noeud alors un noeud est défini par (son nom qui est une chaîne de caractères,
+  ** 2/La classe (Noeud ):** cette classe nous permet de définir un noeud alors un noeud est défini par (son nom qui est une chaîne de caractères,
   
   sa distance d'un autre Noeud de (Graphe), ses voisins qui sont sous forme d'un HashMap et son noeud précédent).
   
-    -->La méthode printPath() de la classe (Noeud) nous permet d'afficher le chemin depuis le Noeud précédent d'un noeud donné.
+  -->*La méthode printPath()* de la classe (Noeud) nous permet d'afficher le chemin depuis le Noeud précédent d'un noeud donné.
     
-    -->La méthode compareTo() de la classe (Noeud) nous permet de comparer la distance entre deux Noeuds différents de (Graphe). Elle retourne la 
+  -->*La fonction compareTo()* de la classe (Noeud) nous permet de comparer la distance entre deux Noeuds différents de (Graphe). Elle retourne la 
     
     distance sous forme d'un entier.
     
-    -->La méthode equals() de la classe (Noeud) qui est en vrai une méthode de l'interface (comparable) implémentée par la classe (Noeud), cette 
+  -->*La fonction equals()* de la classe (Noeud) qui est en vrai une fonction de l'interface (Comparable) implémentée par la classe (Noeud), cette 
     
     méthode nous permet de comparer entre deux Noeuds s'ils sont équivalents (nom, les voisins et la distance entre un noeud et son noeud 
     
     précédent), elle retourne true si c'est le cas.
     
-    -->La méthode hashCode()
+  -->*La fonction hashCode()* de la classe (Noeud) qui est en vrai une fonction de l'interface (Comparable) implémenté par la classe (Noeud),cette
+    
+    fonction nous permet de  digérer les données stockées dans une instance de la classe dans une valeur de hachage (en un entier signé 32-bit), 
+    
+    elle return un entier (result).
+    
+  -->*La fonction toString()* de la classe (noeud) qui fait partie de l'interface (Comparable), elle est implémentée par la classe (Noeud) et elle 
+  
+    nous retourne le nom de noeud et la distance depuis le Noeud précédent.
+    
+    
+** 3/La classe principale (Graphe):**
+
+  -->`Les méthodes et fonctions de la classe (Graphe):
+  `
+  
+  -->*Le constructeur Graphe(Arc[] arcs)()*:il nous permet de construire un (Graphe) à partir d'un tableau d'arcs passé en paramètres en ajoutant
+  
+   des (Noeuds) aux extrémités des (Arcs).
+   
+   
+  -->*La fonction dijkstra(String nomSource)*: cette fonction nous permet de retourner un Arbre (TreeSet<>) contenant tout les (Noeuds), sans 
+  
+   ordre afin de faciliter la tâche de les organiser en fonctions de leur distance depuis le (Noeud) source qui représente le sommet de l'arbre.
+   
+   
+  -->*La méthode dijkstra(final NavigableSet<Noeud> q)*:c'est cette méthode aui fait tout le travaille 
+  
+  
+   
+    
+    
+    
+    
     
     
    
