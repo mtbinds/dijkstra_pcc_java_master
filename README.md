@@ -113,12 +113,29 @@
    des (Noeuds) aux extrémités des (Arcs).
    
    
-  -->*La fonction dijkstra(String nomSource)*: cette fonction nous permet de retourner un Arbre (TreeSet<>) contenant tout les (Noeuds), sans 
+  -->*La fonction dijkstra(String nomSource)*: cette fonction nous retourner un Arbre (TreeSet<>) contenant tout les (Noeuds) menant de la source
   
-   ordre afin de faciliter la tâche de les organiser en fonctions de leur distance depuis le (Noeud) source qui représente le sommet de l'arbre.
+   vers un (Noeud) précis sans ordre afin de faciliter la tâche de les organiser en fonctions de leur distance depuis le (Noeud) source qui 
+   
+   représente le sommet de l'arbre.
    
    
-  -->*La méthode dijkstra(final NavigableSet<Noeud> q)*:c'est cette méthode aui fait tout le travaille 
+  -->*La méthode dijkstra(final NavigableSet<Noeud> q)*:c'est cette méthode aui fait tout le travaille, elle permet d'exploiter l'Arbre retourné
+  
+   par la fonction précédente (dijkstra(String nomSource)), cette méthode nous permet aussi de supprimer les Noeuds inaccessibles. On parcourt 
+   
+   l'arbre depuis la source  vers un (Noeud) précis, passant par les différents (Noeuds) menant vers ce (Noeud) destinataire, puis on compare les
+   
+   diffétrentes distances de chemin de (Noeud) source vers le (Noeud) destinataire, et comme dernière étape on supprime les noeuds dont le chemin
+   
+   en passant par est long et on garde le chemin le plus court et on garde ses (Noeuds).
+   
+  
+  -->*La méthode ecrireChemin()*:cette méthode nous permet d'afficher le chemin depuis le (Noeud) source vers le (Noeud) destinataire. 
+  
+  
+  -->*La méthode printAllPaths()*:cette méthode nous permet d'afficher tout les chemin depuis le (Noeud) source vers tout les (Noeuds) de (Graphe)
+   
   
   
    
