@@ -41,7 +41,29 @@
         graphe généré.
         
         
-**2/Le générateur des graphes (RandomGenerator()) de GraphStream**        
+**2/Le générateur des graphes (RandomGenerator()) de GraphStream**  
+
+   -->Ce générateur nous permet de générer des graphes de différentes tailles aléatoirement ce qui nous facilite la comparaison des deux versions 
+   
+   de l'algorithme de DIJKSTRA en utilisant un graphe d'une grande taille.
+   
+   -->Ce générateur nous permet d'avoir un graphe avec le nombre de noeuds qu'on veut et le degré moyen de chaque noeuds ce qui nous permet d'avoir
+   
+   une certaine densité de connexions entre les noeuds.
+   
+   -->On peut aussi récupérer le graphe généré aléatoirement par RandomGenerator() de GraphStream et le stocker sous forme d'un fichier (.dgs)
+   
+   -->Le graphe généré aléatoirement et stocké dans un fichier (.dgs) est filtré pour en extraire les Noeuds et les arcs aussi les poids des
+   
+   arêtes afin de comparer les deux versions de l'algorithme de DIJKSTRA sur le même graphe pour avoir les meilleurs résultats possibles.
+   
+   
+   
+   
+   
+   
+   
+   
         
         
         
