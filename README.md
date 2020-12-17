@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
                         **Rapport de TP ** *(Implémentation d'une version naïve de l'algorithme de DIJKSTRA)* 
+                        
  
  **1/Introduction ** 
+ 
  
  -->Le TP consiste à implémenter une version naïve de l'algorithme de DIJKSTRA et en comparer les résultats avec les résultats de la version 
  
@@ -21,6 +23,7 @@
  
  
  **2/Structure de programme**
+ 
  
   -->Pour l'implémentation de l'algorithme on a utilisé trois classes réparties dans deux fichiers (.java) : 
   
@@ -43,30 +46,37 @@
         graphe généré.
         
         
-**3/Le générateur des graphes (RandomGenerator()) de GraphStream**  
+**3/Le générateur des graphes (RandomGenerator()) de GraphStream** 
+
 
    -->Ce générateur nous permet de générer des graphes de différentes tailles aléatoirement ce qui nous facilite la comparaison des deux versions 
    
    de l'algorithme de DIJKSTRA en utilisant un graphe d'une grande taille.
    
+   
    -->Ce générateur nous permet d'avoir un graphe avec le nombre de noeuds qu'on veut et le degré moyen de chaque noeuds ce qui nous permet d'avoir
    
    une certaine densité de connexions entre les noeuds.
    
+   
    -->On peut aussi récupérer le graphe généré aléatoirement par RandomGenerator() de GraphStream et le stocker sous forme d'un fichier (.dgs)
+   
    
    -->Le graphe généré aléatoirement et stocké dans un fichier (.dgs) est filtré pour en extraire les Noeuds et les arcs aussi les poids des arêtes
    
    afin de comparer les deux versions de l'algorithme de DIJKSTRA sur le même graphe pour avoir les meilleurs résultats possibles.
+   
    
    -->Ce générateur affecte un seul poids pour toutes les arêtes, et pour les ars entre deux noeuds il les affecte aléatoirement selon le degré 
    
    moyen de chaque noeud (le nombre de ses arêtes dont il fait partie de l'une de ses extrémités).
    
  
-**4/Le fonctionnement de l'algorithme implémenté**   
+**4/Le fonctionnement de l'algorithme implémenté**  
+
    
   -->L'algoritme de DIJKSTRA qu'on a implémenté fait partie de la classe Graphe.
+  
   
   -->La classe (Graphe) comporte deux sous classes qui sont (Noeud et Arc) car un graphe donné est constitué de Noeuds et d'arcs, en plus des 
   
@@ -75,18 +85,23 @@
   
  > Le fonctionnement des méthodes et fonctions de la classe (Graphe):
  
+  
   ** 1/La classe (Arc):** Cette classe est définie par trois paramètre (les deux noeuds des extrémités et la distances entre eux), et elle permet 
   de joindre deux noeuds.
+  
    
   ** 2/La classe (Noeud ):** cette classe nous permet de définir un noeud alors un noeud est défini par (son nom qui est une chaîne de caractères,
   
   sa distance d'un autre Noeud de (Graphe), ses voisins qui sont sous forme d'un HashMap et son noeud précédent).
   
+  
   -->*La méthode printPath()* de la classe (Noeud) nous permet d'afficher le chemin depuis le Noeud précédent d'un noeud donné.
+  
     
   -->*La fonction compareTo()* de la classe (Noeud) nous permet de comparer la distance entre deux Noeuds différents de (Graphe). Elle retourne la 
     
     distance sous forme d'un entier.
+    
     
   -->*La fonction equals()* de la classe (Noeud) qui est en vrai une fonction de l'interface (Comparable) implémentée par la classe (Noeud), cette 
     
@@ -94,11 +109,13 @@
     
     précédent), elle retourne true si c'est le cas.
     
+    
   -->*La fonction hashCode()* de la classe (Noeud) qui est en vrai une fonction de l'interface (Comparable) implémenté par la classe (Noeud),cette
     
     fonction nous permet de  digérer les données stockées dans une instance de la classe dans une valeur de hachage (en un entier signé 32-bit), 
     
     elle return un entier (result).
+    
     
   -->*La fonction toString()* de la classe (noeud) qui fait partie de l'interface (Comparable), elle est implémentée par la classe (Noeud) et elle 
   
@@ -106,6 +123,7 @@
     
     
 ** 3/La classe principale (Graphe):**
+
 
   -->`Les méthodes et fonctions de la classe (Graphe):
   `
@@ -148,14 +166,18 @@
   
   
     ->Cette version comprend un nombre important de méthodes et fonctions,les principales sont:
+    
      
      -->*La méthode init()*: elle permet de définir un graphe spécifique comme étant un graphe à qui on applique le programme de (DIJKSTRA).
+     
    
      -->*La méthode setSource()*: elle permet de définir le (Noeud) source de graphe pour le programme de (DIJKSTRA).
+     
      
      -->*La méthode compute()*: c'est la méthode la plus importante car elle permet d'avoir tout les courts chemins de (Noeud) source vers tout
      
         autres Noeuds de (Graphe).
+        
         
      -->*La méthode getPath()*: cette méthode nous retourne le plus court chemin entre le (Noeud) source et un (Noeud) destinataire.
      
@@ -186,7 +208,6 @@
   d'exécution de la version naïve de  l'algorithme sur le même graphe de la même taille (1000 noeuds) est égale à (1002 ms). 
   
   
-  
   -->On a testé les deux versions d'algorithme de DIJKSTRA sur plusieurs tailles de graphes (100,500,1000,2000....10000) on avait à chaque fois 
   
   le temps de l'exécution de la version naïve de l'algorithme de (DIJKSTRA) est beaucoup plus important par rapport au temps d'exécution de la 
@@ -213,6 +234,7 @@
   
   moins compliquées.
   
+  
   -->On explique la différence du temps d'exécution des deux versions de l'algorithme de (DIJKSTRA) par la différence de structure des programmes,
   
   ce qui veut dire que la version de l'algorithme de (DIJKSTRA) est plus optimisée que la version naïve de l'algorithme car les méthodes et 
@@ -235,6 +257,7 @@
   
   
   ** 7/Le traçage des courbes des deux versions de l'algorithme de (DIJKSTRA)**
+  
   
   -->Pour traçer les courbes des deux versions de l'algorithme de (DIJKSTRA) on doit générer des graphes de différentes tailles (100, 500, 1000..
   
