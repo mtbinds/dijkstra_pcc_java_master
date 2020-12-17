@@ -1,4 +1,3 @@
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
                         **Rapport de TP ** *(Implémentation d'une version naïve de l'algorithme de DIJKSTRA)* 
@@ -167,23 +166,33 @@
    
 ** 6/Le test des deux versions d'algorithmes de (DIJKSTRA)**
 
+
   -->Pour avoir les résultats exacts on a généré à chaque fois un graphe avec la fonction (RandomGenerator()) de (GraphStream) puis on l'a stoké
 
   sous forme d'un fichier (graphes.dgs).
+  
 
   -->On a filtré les données de fichier (graphe.dgs) pour les deux versions en reconstruisant le même (Graph) en lui appliquant les deux versions
 
   de l'algorithme de (DIJKSTRA).
 
-  -->On a testé les deux algorithmes sur plusieurs (Graphes) de tailles différentes et on a eu à chaque fois les temps d'exécution des deux 
 
-  versions de l'algorithme de (DIJKSTRA) qui sont égaux (par exemple pour un graphe de 1000 noeuds on a le temps d'exécution des deux algorithmes de
-
-  (DIJKSTRA) est égal à 4s et 868 ms).
-
-  -->On a testé les deux versions d'algorithme de DIJKSTRA sur plusieurs tailles de graphes (100,500,1000,2000....10000) on avait toujours les 
-
-  temps d'exécution des deux algorithmes qui sont égaux.
+  -->On a testé les deux algorithmes sur plusieurs (Graphes) de tailles différentes et on a eu à chaque fois le temps d'exécution de la version
+  
+  GraphStream de l'algorithme de (DIJKSTRA) est plus court que le temps d'exécution de  la version naïve de l'algorithme de (DIJKSTRA), par 
+  
+  exemple, pour un gaphe de 1000 (Noeuds), le temps d'éxécution de la version (GraphStream) de l'algorithme est égale à (160 ms) alors que le temps
+  
+  d'exécution de la version naïve de  l'algorithme sur le même graphe de la même taille (1000 noeuds) est égale à (1002 ms). 
+  
+  
+  
+  -->On a testé les deux versions d'algorithme de DIJKSTRA sur plusieurs tailles de graphes (100,500,1000,2000....10000) on avait à chaque fois 
+  
+  le temps de l'exécution de la version naïve de l'algorithme de (DIJKSTRA) est beaucoup plus important par rapport au temps d'exécution de la 
+  
+  version (GraphStream) de l'algorithme de (DIJKSTRA).
+  
 
   -->On a choisit de d'utiliser le même Graphe à chaque fois pour les deux algorithmes de (DIJKSTRA) pour assurer que les résultats seront les 
 
@@ -192,19 +201,29 @@
   -->On a tracé une courbe pour les temps d'exécution des deux versions de l'algorithme de DIJKSTRA, la courbe se trouve dans le dépôt (GIT).
   
 
+
 ** 7/La comparaison des deux versions des algorithmes de (DIJKSTRA)**  
   
-  -->Les deux vesrions nous permettent d'avoir les mêmes résultats, la différence entre les deux version est que la version de l'algorithme de 
   
-  (DIJKSTRA) de (GraphStream) est plus pratique vu qu'elle comporte plus de méthodes et fonctions qui compressent les fonctions et méthodes de la 
+  -->Les deux vesrions nous permettent d'avoir les mêmes résultats (le même chemin menant de Noeud source vers le Noeud destinataire), la 
   
-  version naïve de l'algorithme de (DIJKSTRA) en fonctions et méthodes moins compliquées.
+  différence entre les deux version est que la version de l'algorithme de (DIJKSTRA) de (GraphStream) est plus pratique vu qu'elle comporte plus 
   
-  -->On explique le même temps d'exécution des deux algorithmes par l'utilisation des listes chainées et des arbres dans les deux versions de 
+  de méthodes et fonctions qui compressent les fonctions et méthodes de la version naïve de l'algorithme de (DIJKSTRA) en fonctions et méthodes 
   
-  l'algorithme de (DIJKSTRA) dont l'accès est de même complexité temporelle pour un nombre similaire de (Noeuds).
+  moins compliquées.
   
-  -->En terme de complexité temporelle donc on remarque que les deux algorithmes ont la même complexité temporelle.
+  -->On explique la différence du temps d'exécution des deux versions de l'algorithme de (DIJKSTRA) par la différence de structure des programmes,
+  
+  ce qui veut dire que la version de l'algorithme de (DIJKSTRA) est plus optimisée que la version naïve de l'algorithme car les méthodes et 
+  
+  fonctions de la version (GraphStream) sont plus optimisées en terme de nombre de boucles (complexité spatiale).
+  
+  
+  -->En terme de complexité temporelle donc on remarque que les deux algorithmes n'ont pas la même complexité temporelle, la version naïve de 
+  
+  l'algorithme de (DIJKSTRA) est moins performante que la version GraphStream.
+  
   
   -->En terme de complexité spatiale la version de l'algorithme de (DIJKSTRA) de (GraphStream) est plus pratique vu qu'on travaille sur un grand 
   
@@ -225,21 +244,25 @@
   
   mesurer le temps de l'exécution de l'algorithme sur les deux versions de l'algorithme de (DIJKSTRA) puis on trace les courbes.
   
-  -->En traçant les courbes on remarques que les deux versions de l'algorithme de (DIJKSTRA) ont toujours le même temps d'exécution pour un même
   
-  (Graphe) d'une taille donnée.
+  -->En traçant les courbes on remarques que la version (GraphStream) de l'algorithme de (DIJKSTRA) est toujours plus performante que la version
+  
+  naïve de l'algorithme de (DIJKSTRA) sur un (Graphe) d'une taille donnée.
+  
   
   -->La courbe de l'exécution des deux (Graphes) est incluse dans le dépôt (GIT) sous le nom de (graphes.png).
   
   
   ** 8/L'exécution des deux algorithmes de (DIJKSTRA) sur un même (Graphe) plusieurs fois**
+  
    
    -->On a remarqué que l'exécution des deux algorithmes de (DIJKSTRA) sur un même (Graphe) d'une certaine taille un certain nombre de fois donne 
    
-   toujours le même temps d'exécution pour les deux algorithmes.
+   toujours presque le même temps d'exécution pour chaque version d'algorithme de (DIJKSTRA).
    
   
   ** 9/Les tests de l'algorithme de (DIJKSTRA)**
+  
    
    -->On a testé les deux versions de l'algorithme de (DIJKSTRA) sur une machine de (8 Go de RAM et un processeur Intel i7), et les courbes
    
@@ -247,6 +270,7 @@
    
    
   ** 10/Les difficultés rencontrées**
+  
   
    -->on a rencontré quelques difficultés telles que la mise en marche des différentes (méthodes/fonctions), au début on a implémenté une version
    
@@ -260,37 +284,46 @@
     
   ** 11/Conclusion**
   
+  
    -->On a implémenté une version naïve de l'algorithme de (DIJKSTRA) en utilisant  une classe (Graphe) qui inclut deux sous classes internes
    
    ce qui nous permet de comparer cette version avec la version de même algorithme de (GraphStream).
+   
    
    -->On a utilisé les listes chaînées (LinkedList) et les Arbres (TreeSet) pour implémenter notre algorithme, car l'utilisation des tableaux 
    
    statiques est trop limitée.
    
+   
    -->Pour comparer le temps d'exécution sur les deux versions de l'algorithme de (DIJKSTRA), on a utilisé la fonction (RandomGenerator()) de 
    
    (GraphStream) pour générer des (Graphes) puis on les stocke sous forme (graphes.dgs).
+   
    
    -->On procède à filtrer les données de fichier (graphes.dgs) en reconstruisant le même (Graphe) à chaque fois pour tester les deux versions de
    
    l'algorithme de (DISKSTRA).
    
-   -->En testant les deux versions de l'algorithme on remarque qu'elles mettent exactement le même temps pour s'exécuter ce qui signifie que les
    
-   deux versions de l'algorithme de (DIJKSTRA) on la même capacité spaciale.
+   -->En testant les deux versions de l'algorithme on remarque qu'elles mettent des temps différents pour s'exécuter ce qui signifie que les deux
+   
+   versions de l'algorithme de (DIJKSTRA) ont une complexité temporelle différente.
+   
    
    -->La version naïve de l'algorithme de (DIJKSTRA) nous permet d'avoir le chemin le plus cours depuis un (Noeud) source vers chaque (Noeud) de
    
    notre (Graphe), pour un (Graphe) de taille donnée.
    
+   
    -->La version naïve de l'algorithme de (DIJKSTRA) implémentée fonctionne pour une taille de (Graphe) illimitée (la seule limite est la limite
    
    définie par Java et la capacité de la machine sur laquelle l'algorithme s'exécute).
    
+   
    -->On peut utiliser ce type d'algorithme pour faciliter la navigation (GPS) par exemple, alors que chaque adresse représente un (Noeud) et les 
    
    chemins représentent les (Arcs).
+   
    
    -->On peut améliorer le temps d'exécution de cette version naïve de l'algorithme de (DIJKSTRA) en l'implémentant sur (Python) 
    
