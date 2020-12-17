@@ -131,10 +131,14 @@
    en passant par est long et on garde le chemin le plus court et on garde ses (Noeuds).
    
   
-  -->*La méthode ecrireChemin()*:cette méthode nous permet d'afficher le chemin depuis le (Noeud) source vers le (Noeud) destinataire. 
+  -->*La méthode ecrireChemin()*: cette méthode nous permet d'afficher le chemin le plus court (+Noeuds) depuis le (Noeud) source vers le (Noeud) 
+  
+  destinataire. 
   
   
-  -->*La méthode printAllPaths()*:cette méthode nous permet d'afficher tout les chemin depuis le (Noeud) source vers tout les (Noeuds) de (Graphe).
+  -->*La méthode printAllPaths()*:cette méthode nous permet d'afficher tout les chemin les plus courts depuis le (Noeud) source vers tout les 
+  
+  (Noeuds) de (Graphe).
   
   
   
@@ -158,7 +162,7 @@
    --> `On Constate que la version de l'algorithme (DIJKSTRA) de GraphStream est plus pratique en terme d'appels vers les méthodes/fonctions`
    
    
-** 6/Le test des deux versions des algorithmes de (DIJKSTRA)**
+** 6/Le test des deux versions d'algorithmes de (DIJKSTRA)**
 
   -->Pour avoir les résultats exacts on a généré à chaque fois un graphe avec la fonction (RandomGenerator()) de (GraphStream) puis on l'a stoké
 
@@ -166,13 +170,13 @@
 
   -->On a filtré les données de fichier (graphe.dgs) pour les deux versions en reconstruisant le même (Graph) en lui appliquant les deux versions
 
-  de l'algorithme de DIJKSTRA.
+  de l'algorithme de (DIJKSTRA).
 
   -->On a testé les deux algorithmes sur plusieurs (Graphes) de tailles différentes et on a eu à chaque fois les temps d'exécution des deux 
 
-  versions de l'algorithme de DIJKSTRA qui sont égaux (par exemple pour un graphe de 1000 noeuds on a le temps d'exécution des deux algorithmes de
+  versions de l'algorithme de (DIJKSTRA) qui sont égaux (par exemple pour un graphe de 1000 noeuds on a le temps d'exécution des deux algorithmes de
 
-  DIJKSTRA est égal à 4s et 868 ms).
+  (DIJKSTRA) est égal à 4s et 868 ms).
 
   -->On a testé les deux versions d'algorithme de DIJKSTRA sur plusieurs tailles de graphes (100,500,1000,2000....10000) on avait toujours les 
 
@@ -183,6 +187,25 @@
   plus exacts possibles.
   
   -->On a tracé une courbe pour les temps d'exécution des deux versions de l'algorithme de DIJKSTRA, la courbe se trouve dans le dépôt (GIT).
+  
+
+** 6/La comparaison des deux versions des algorithmes de (DIJKSTRA)**  
+  
+  -->Les deux vesrions nous permettent d'avoir les mêmes résultats, la différence entre les deux version est que la version de l'algorithme de 
+  
+  (DIJKSTRA) de (GraphStream) est plus pratique vu qu'elle comporte plus de méthodes et fonctions qui compressent les fonctions et méthodes de la 
+  
+  version naïve de l'algorithme de (DIJKSTRA) en fonctions et méthodes moins compliquées.
+  
+  -->On explique les mêmes temps d'exécution des deux algorithmes par l'utilisation des listes chainées et des arbres dans les deux versions de 
+  
+  l'algorithme de (DIJKSTRA) dont l'accès est de même complexité temporelle pour un nombre similaire de (Noeuds).
+  
+  
+  
+  
+  
+  
   
    
    
