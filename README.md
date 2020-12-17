@@ -158,6 +158,34 @@
    --> `On Constate que la version de l'algorithme (DIJKSTRA) de GraphStream est plus pratique en terme d'appels vers les méthodes/fonctions`
    
    
+** 6/Le test des deux versions des algorithmes de (DIJKSTRA)**
+
+  -->Pour avoir les résultats exacts on a généré à chaque fois un graphe avec la fonction (RandomGenerator()) de (GraphStream) puis on l'a stoké
+
+  sous forme d'un fichier (graphes.dgs).
+
+  -->On a filtré les données de fichier (graphe.dgs) pour les deux versions en reconstruisant le même (Graph) en lui appliquant les deux versions
+
+  de l'algorithme de DIJKSTRA.
+
+  -->On a testé les deux algorithmes sur plusieurs (Graphes) de tailles différentes et on a eu à chaque fois les temps d'exécution des deux 
+
+  versions de l'algorithme de DIJKSTRA qui sont égaux (par exemple pour un graphe de 1000 noeuds on a le temps d'exécution des deux algorithmes de
+
+  DIJKSTRA est égal à 4s et 868 ms).
+
+  -->On a testé les deux versions d'algorithme de DIJKSTRA sur plusieurs tailles de graphes (100,500,1000,2000....10000) on avait toujours les 
+
+  temps d'exécution des deux algorithmes qui sont égaux.
+
+  -->On a choisit de d'utiliser le même Graphe à chaque fois pour les deux algorithmes de (DIJKSTRA) pour assurer que les résultats seront les 
+
+  plus exacts possibles.
+  
+  -->On a tracé une courbe pour les temps d'exécution des deux versions de l'algorithme de DIJKSTRA, la courbe se trouve dans le dépôt (GIT).
+  
+   
+   
    
    
   
