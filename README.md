@@ -1,3 +1,6 @@
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
                         **Rapport de TP ** *(Implémentation d'une version naïve de l'algorithme de DIJKSTRA)* 
  
  **1/Introduction ** 
@@ -291,7 +294,8 @@
    
    -->On peut améliorer le temps d'exécution de cette version naïve de l'algorithme de (DIJKSTRA) en l'implémentant sur (Python) 
    
-   
+
+--------------------------------------------------------------------------------------------------------------------------------------------------   
    
    
    
