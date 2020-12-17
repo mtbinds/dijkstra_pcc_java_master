@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -196,7 +195,7 @@ class Graphe {
 
     public static class Noeud implements Comparable<Noeud> {
         public final String nom;
-        // MAX_VALUE assumed to be infinity
+        // MAX_VALUE supposée à l'infinité
         public int dist = Integer.MAX_VALUE;
         public Noeud précédent = null;
         public final Map<Noeud, Integer> voisins = new HashMap<>();
@@ -261,16 +260,19 @@ class Graphe {
     public Graphe(Arc[] arcs) {
         graph = new HashMap<>(arcs.length);
 
-        // one pass to find all vertices
+        //Pour trouver tout les Noeuds
+        
         for (Arc e : arcs) {
             if (!graph.containsKey(e.v1)) graph.put(e.v1, new Noeud(e.v1));
             if (!graph.containsKey(e.v2)) graph.put(e.v2, new Noeud(e.v2));
         }
 
-        // another pass to set neighbouring vertices
+        //Pour définir les Noeuds voisins
+        
         for (Arc e : arcs) {
             graph.get(e.v1).voisins.put(graph.get(e.v2), e.dist);
-            // graph.get(e.v2).voisins.put(graph.get(e.v1), e.dist); // also do this for an undirected
+            
+            // graph.get(e.v2).voisins.put(graph.get(e.v1), e.dist);
             // graph
         }
     }
@@ -279,13 +281,14 @@ class Graphe {
 
     public void dijkstra(String nomSource) {
         if (!graph.containsKey(nomSource)) {
-            System.err.printf("Graph doesn't contain start vertex \"%s\"%n", nomSource);
+            System.err.printf("Le Graphe ne contient pas un Noeud source \"%s\"%n", nomSource);
             return;
         }
         final Noeud source = graph.get(nomSource);
         NavigableSet<Noeud> q = new TreeSet<>();
 
-        // set-up vertices
+        // Définition des Noeuds
+        
         for (Noeud v : graph.values()) {
             v.précédent = v == source ? source : null;
             v.dist = v == source ? 0 : Integer.MAX_VALUE;
@@ -304,16 +307,20 @@ class Graphe {
             //Le Noeud avec la plus petite distance (la première itération retourne la source)
 
             u = q.pollFirst();
+            
             if (u.dist == Integer.MAX_VALUE)
-                break; // on peut ignorer u (et tout les autres noeuds) car ils sont inaccessibles
+            
+                break; // On peut ignorer u (et tout les autres noeuds) car ils sont inaccessibles
 
-            // voir les distances vers chaque voisin
+            // Voir les distances vers chaque voisin
 
             for (Map.Entry<Noeud, Integer> a : u.voisins.entrySet()) {
-                v = a.getKey(); // le voisin dans cette itération
+                
+                v = a.getKey(); // Le voisin dans cette itération
 
                 final int alternateDist = u.dist + a.getValue();
-                if (alternateDist < v.dist) { // shorter path to neighbour found
+                
+                if (alternateDist < v.dist) { // Le plus petit chemin vers le voisin est trouvé
                     q.remove(v);
                     v.dist = alternateDist;
                     v.précédent = u;
@@ -325,17 +332,18 @@ class Graphe {
 
     /** Ecrit un chemin de la source vers le noeud destinataire */
 
-    public void ecrireChemin(String endName) {
-        if (!graph.containsKey(endName)) {
-            System.err.printf("Le Graphe ne contient pas un noeud destinataire \"%s\"%n", endName);
+    public void ecrireChemin(String nomFin) {
+        if (!graph.containsKey(nomFin)) {
+            System.err.printf("Le Graphe ne contient pas un noeud destinataire \"%s\"%n", nomFin);
             return;
         }
 
-        graph.get(endName).printPath();
+        graph.get(nomFin).printPath();
         System.out.println();
     }
 
     /** Ecrit le chemin de la source vers chaque Noeud de Graphe */
+    
     public void printAllPaths() {
         for (Noeud v : graph.values()) {
             v.printPath();
