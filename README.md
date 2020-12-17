@@ -197,9 +197,105 @@
   
   version naïve de l'algorithme de (DIJKSTRA) en fonctions et méthodes moins compliquées.
   
-  -->On explique les mêmes temps d'exécution des deux algorithmes par l'utilisation des listes chainées et des arbres dans les deux versions de 
+  -->On explique le même temps d'exécution des deux algorithmes par l'utilisation des listes chainées et des arbres dans les deux versions de 
   
   l'algorithme de (DIJKSTRA) dont l'accès est de même complexité temporelle pour un nombre similaire de (Noeuds).
+  
+  -->En terme de complexité temporelle donc on remarque que les deux algorithmes ont la même complexité temporelle.
+  
+  -->En terme de complexité spatiale la version de l'algorithme de (DIJKSTRA) de (GraphStream) est plus pratique vu qu'on travaille sur un grand 
+  
+  package et les méthodes/fonctions sont plus optimisées et il y a moins de boucles, aussi les classes internes (Noeud et Arc) de la classe 
+  
+  (Graphe) de la version naïve de l'algorithme de (DIJKSTRA) sont plus coûteuses en matière de mémoire, contrairement à la version de l'algorithme
+  
+  de (GraphStream) dont les classes sont plus optimisées en utilisant plus de méthodes/fonctions des classes supérieures.
+  
+  
+  ** 6/Le traçage des courbes des deux versions de l'algorithme de (DIJKSTRA)**
+  
+  -->Pour traçer les courbes des deux versions de l'algorithme de (DIJKSTRA) on doit générer des graphes de différentes tailles (100, 500, 1000..
+  
+  ...10000) et stocker ces (Graphes sous format .dgs) à chaque fois, et filtrer les données pour reconstruire le (Graphe) depuis le fichier, en
+  
+  filtrant les données, ce qui va nous permettre de reconstruire le même (Graphe) et appliquer les deux versions de l'algorithme de (DIJKSTRA) et
+  
+  mesurer le temps de l'exécution de l'algorithme sur les deux versions de l'algorithme de (DIJKSTRA) puis on trace les courbes.
+  
+  -->En traçant les courbes on remarques que les deux versions de l'algorithme de (DIJKSTRA) ont toujours le même temps d'exécution pour un même
+  
+  (Graphe) d'une taille donnée.
+  
+  -->La courbe de l'exécution des deux (Graphes) est incluse dans le dépôt (GIT) sous le nom de (graphes.png).
+  
+  
+  ** 7/L'exécution des deux algorithmes de (DIJKSTRA) sur un même (Graphe) plusieurs fois**
+   
+   -->On a remarqué que l'exécution des deux algorithmes de (DIJKSTRA) sur un même (Graphe) d'une certaine taille un certain nombre de fois donne 
+   
+   toujours le même temps d'exécution pour les deux algorithmes.
+   
+  
+  ** 8/Les tests de l'algorithme de (DIJKSTRA)**
+   
+   -->On a testé les deux versions de l'algorithme de (DIJKSTRA) sur une machine de (8 Go de RAM et un processeur Intel i7), et les courbes
+   
+   tracées utilisent les données mesurées sur cette machine.
+   
+   
+  ** 8/Les difficultés rencontrées**
+  
+   -->on a rencontré quelques difficultés telles que la mise en marche des différentes (méthodes/fonctions), au début on a implémenté une version
+   
+   plus naïve de l'algorithme de (DIJKSTRA) en utilisant uniquement des tableaux statiques ce qui rend l'algorithme trop limité, car en atteignant
+   
+   la taille d'un (Graphe) de 10000 (Noeuds) l'algorithme se met en erreur (OutOfMemoryBounds), qui signifie un problème de mémoire causée par
+   
+   les tableaux statiques.
+  
+  
+    
+  ** 9/Conclusion**
+  
+   -->On a implémenté une version naïve de l'algorithme de (DIJKSTRA) en utilisant  une classe (Graphe) qui inclut deux sous classes internes
+   
+   ce qui nous permet de comparer cette version avec la version de même algorithme de (GraphStream).
+   
+   -->On utilisé les listes chaînées et les Arbres (TreeSet) 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
+  
+  
   
   
   
