@@ -189,7 +189,7 @@
   -->On a tracé une courbe pour les temps d'exécution des deux versions de l'algorithme de DIJKSTRA, la courbe se trouve dans le dépôt (GIT).
   
 
-** 6/La comparaison des deux versions des algorithmes de (DIJKSTRA)**  
+** 7/La comparaison des deux versions des algorithmes de (DIJKSTRA)**  
   
   -->Les deux vesrions nous permettent d'avoir les mêmes résultats, la différence entre les deux version est que la version de l'algorithme de 
   
@@ -212,7 +212,7 @@
   de (GraphStream) dont les classes sont plus optimisées en utilisant plus de méthodes/fonctions des classes supérieures.
   
   
-  ** 6/Le traçage des courbes des deux versions de l'algorithme de (DIJKSTRA)**
+  ** 7/Le traçage des courbes des deux versions de l'algorithme de (DIJKSTRA)**
   
   -->Pour traçer les courbes des deux versions de l'algorithme de (DIJKSTRA) on doit générer des graphes de différentes tailles (100, 500, 1000..
   
@@ -229,21 +229,21 @@
   -->La courbe de l'exécution des deux (Graphes) est incluse dans le dépôt (GIT) sous le nom de (graphes.png).
   
   
-  ** 7/L'exécution des deux algorithmes de (DIJKSTRA) sur un même (Graphe) plusieurs fois**
+  ** 8/L'exécution des deux algorithmes de (DIJKSTRA) sur un même (Graphe) plusieurs fois**
    
    -->On a remarqué que l'exécution des deux algorithmes de (DIJKSTRA) sur un même (Graphe) d'une certaine taille un certain nombre de fois donne 
    
    toujours le même temps d'exécution pour les deux algorithmes.
    
   
-  ** 8/Les tests de l'algorithme de (DIJKSTRA)**
+  ** 9/Les tests de l'algorithme de (DIJKSTRA)**
    
    -->On a testé les deux versions de l'algorithme de (DIJKSTRA) sur une machine de (8 Go de RAM et un processeur Intel i7), et les courbes
    
    tracées utilisent les données mesurées sur cette machine.
    
    
-  ** 8/Les difficultés rencontrées**
+  ** 10/Les difficultés rencontrées**
   
    -->on a rencontré quelques difficultés telles que la mise en marche des différentes (méthodes/fonctions), au début on a implémenté une version
    
@@ -255,13 +255,42 @@
   
   
     
-  ** 9/Conclusion**
+  ** 11/Conclusion**
   
    -->On a implémenté une version naïve de l'algorithme de (DIJKSTRA) en utilisant  une classe (Graphe) qui inclut deux sous classes internes
    
    ce qui nous permet de comparer cette version avec la version de même algorithme de (GraphStream).
    
-   -->On utilisé les listes chaînées et les Arbres (TreeSet) 
+   -->On a utilisé les listes chaînées (LinkedList) et les Arbres (TreeSet) pour implémenter notre algorithme, car l'utilisation des tableaux 
+   
+   statiques est trop limitée.
+   
+   -->Pour comparer le temps d'exécution sur les deux versions de l'algorithme de (DIJKSTRA), on a utilisé la fonction (RandomGenerator()) de 
+   
+   (GraphStream) pour générer des (Graphes) puis on les stocke sous forme (graphes.dgs).
+   
+   -->On procède à filtrer les données de fichier (graphes.dgs) en reconstruisant le même (Graphe) à chaque fois pour tester les deux versions de
+   
+   l'algorithme de (DISKSTRA).
+   
+   -->En testant les deux versions de l'algorithme on remarque qu'elles mettent exactement le même temps pour s'exécuter ce qui signifie que les
+   
+   deux versions de l'algorithme de (DIJKSTRA) on la même capacité spaciale.
+   
+   -->La version naïve de l'algorithme de (DIJKSTRA) nous permet d'avoir le chemin le plus cours depuis un (Noeud) source vers chaque (Noeud) de
+   
+   notre (Graphe), pour un (Graphe) de taille donnée.
+   
+   -->La version naïve de l'algorithme de (DIJKSTRA) implémentée fonctionne pour une taille de (Graphe) illimitée (la seule limite est la limite
+   
+   définie par Java et la capacité de la machine sur laquelle l'algorithme s'exécute).
+   
+   -->On peut utiliser ce type d'algorithme pour faciliter la navigation (GPS) par exemple, alors que chaque adresse représente un (Noeud) et les 
+   
+   chemins représentent les (Arcs).
+   
+   -->On peut améliorer le temps d'exécution de cette version naïve de l'algorithme de (DIJKSTRA) en l'implémentant sur (Python) 
+   
    
    
    
